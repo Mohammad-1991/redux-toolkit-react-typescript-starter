@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useDispatch } from "react-redux"
+import { Box, Typography } from "@mui/material"
+import Navbar from "./components/Navbar"
+import AddToCart from "./components/AddToCart"
+import { useSelector } from "react-redux"
+import BuyComp from "./components/BuyComp"
+import CartFullMessage from "./components/cartFullMessage"
+import { setBuyComp } from "./redux_manager/slices/enableBuy"
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch()
+  const cartCount = useSelector(state => state.cartCount.value)
+  const enableComp = useSelector( state => state.enableBuy.value)
+  if(cartCount < 5 ){dispatch(setBuyComp(false))}
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Box textAlign={"center"}>
+     <Navbar/>
+      <Typography p={2} >Here we are using the cartCount state in two differenct components with the help of redux</Typography>
+     <AddToCart/>
+     <Typography p={2} >Here we display a message when cart value is greater or equal to 5</Typography>
+     {cartCount >= 5 && 
+     <CartFullMessage/>
+     }
+     {enableComp && 
+     <BuyComp/>
+     }
+    </Box>
   )
 }
 
