@@ -6,6 +6,7 @@ import { useSelector } from "react-redux"
 import BuyComp from "./components/BuyComp"
 import CartFullMessage from "./components/cartFullMessage"
 import { setBuyComp } from "./redux_manager/slices/enableBuy"
+import FetchData from "./components/FetchData"
 
 
 
@@ -28,6 +29,7 @@ function App() {
      {enableComp && 
      <BuyComp/>
      }
+     <FetchData/>
     </Box>
   )
 }
