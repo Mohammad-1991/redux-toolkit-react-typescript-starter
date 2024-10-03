@@ -1,6 +1,6 @@
 # Redux Toolkit with TypeScript Integration and Code Refactoring
 
-This project represents a structured implementation of Redux Toolkit, with TypeScript added to enhance type safety and scalability. The codebase was initially developed by another contributor ( Ishtiaq Ahmad ), whose original work can be found [here](https://github.com/Isthiaq-Ahmed/React_Redux_Practic).
+This project represents a structured implementation of Redux Toolkit, with TypeScript added to enhance type safety and scalability. The codebase was initially developed by another contributor ( Ishtiaq Ahmad ), whose original work can be found [here](https://github.com/Isthiaq-Ahmed/React_Redux_Practice).
 
 ## Enhancements & Additions:
 
