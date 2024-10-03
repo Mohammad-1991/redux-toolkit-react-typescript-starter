@@ -28,3 +28,13 @@ The JSX structure and MUI components remain as initially provided. While they me
 - **Redux Toolkit**: For state management.
 - **TypeScript**: For type safety and better tooling support.
 - **Material-UI (MUI)**: For UI components.
+
+## Vital Consideration
+
+Please note that this current implementation does not yet incorporate **Redux Toolkit Query (RTK Query)**. While this example showcases best practices for structure and component architecture, RTK Query is a critical tool for handling caching and data fetching in production-grade applications. 
+
+RTK Query would significantly enhance performance, efficiency, and scalability, especially when managing remote data sources, by reducing boilerplate and offering built-in caching, automatic refetching, and mutation handling. As the application evolves, integrating RTK Query would be a natural progression to ensure a more robust, high-performance, and scalable solution. 
+
+Although this implementation provides a strong foundation, future enhancements could include RTK Query to better manage server interactions and state, allowing for a more streamlined data flow and superior user experience.
+
+
