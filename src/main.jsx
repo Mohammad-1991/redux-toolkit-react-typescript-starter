@@ -1,14 +1,14 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import AppProviders from "./providers/AppProviders.tsx";
+import App from "./App.tsx";
+import "./index.css";
 
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { Provider } from 'react-redux'
-import reduxStore from './redux_manager/reduxStore.js'
-createRoot(document.getElementById('root')).render(
+// adds AppProvider for entire app
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Provider store={reduxStore}>
-    <App />
-    </Provider>
-  </StrictMode>,
-)
+    <AppProviders>
+      <App />
+    </AppProviders>
+  </StrictMode>
+);
