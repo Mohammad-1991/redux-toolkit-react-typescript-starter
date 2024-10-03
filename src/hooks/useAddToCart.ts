@@ -8,7 +8,7 @@ export const useAddToCart = () => {
   const dispatch = useAppDispatch();
   // Define the functions with proper dispatch typing
   const addItemToCart = () => dispatch(addToCart());
-  const removeItemToCart = () => dispatch(removeFromCart());
+  const removeItemFromCart = () => dispatch(removeFromCart());
 
-  return { addItemToCart, removeItemToCart };
+  return { addItemToCart, removeItemFromCart };
 };

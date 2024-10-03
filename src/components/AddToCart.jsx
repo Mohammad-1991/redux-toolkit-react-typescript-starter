@@ -3,7 +3,7 @@ import { useAddToCart } from "../hooks/useAddToCart";
 
 const AddToCart = () => {
   // useAddToCart custom hook , provides functionality for addItemToCart and removeItemToCart;
-  const { addItemToCart, removeItemToCart } = useAddToCart();
+  const { addItemToCart, removeItemFromCart } = useAddToCart();
   return (
     <Box
       display={"flex"}
@@ -22,7 +22,7 @@ const AddToCart = () => {
         <Button variant="contained" onClick={addItemToCart}>
           Add to cart
         </Button>
-        <Button variant="contained" onClick={removeItemToCart}>
+        <Button variant="contained" onClick={removeItemFromCart}>
           Remove from cart
         </Button>
       </Box>
